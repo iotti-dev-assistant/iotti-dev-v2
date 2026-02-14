@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { SiteHeader } from "@/components/SiteHeader";
+import WebGLBackgroundLoader from "@/components/WebGLBackgroundLoader";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -50,6 +51,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} min-h-full bg-zinc-50 text-zinc-900 antialiased dark:bg-black dark:text-zinc-50`}
       >
+        <WebGLBackgroundLoader />
         <SiteHeader />
         {children}
       </body>
